@@ -87,20 +87,12 @@ export const Shop = ({ children }) => {
   const fetchAllProducts = async () => {
     await client.product.fetchAll().then((products) => {
       setProducts(products);
-<<<<<<< Updated upstream
-      //  console.log(products);
-=======
->>>>>>> Stashed changes
     });
   };
 
   const fetchSingleProduct = (id) => {
     client.product.fetch(id).then((product) => {
       console.log(product);
-<<<<<<< Updated upstream
-      //  console.log(product.id);
-=======
->>>>>>> Stashed changes
       setProduct(product);
     });
   };
@@ -111,12 +103,6 @@ export const Shop = ({ children }) => {
 
   const fecthHomeCollection = async () => {
     await client.collection.fetchAllWithProducts().then((collections) => {
-<<<<<<< Updated upstream
-      // Do something with the collections
-      // console.log(collections);
-      //console.log(collections[0].products);
-=======
->>>>>>> Stashed changes
       setCollections(collections[0].products);
     });
   };

@@ -3,7 +3,6 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import ReactPlayer from "react-player";
 import { Heading } from "../../components/heading/Heading";
-import IMG_2533 from "../../images/IMG_2533.jpg";
 import { ContactFormWithBlur } from "../../components/contact-form/ContactFormWithBlur";
 import { MobileHeader } from "../../components/mobile-header/MobileHeader";
 import { useMediaQuery } from "react-responsive";

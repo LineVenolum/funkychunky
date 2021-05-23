@@ -23,7 +23,6 @@ export const Instagram = () => {
       "https://v1.nocodeapi.com/linevenolum/instagram/wwXcTnelbjmsrURX"
     );
     const json = await response.json();
-    console.log(json);
     setInstaposts(json.data);
   };
 

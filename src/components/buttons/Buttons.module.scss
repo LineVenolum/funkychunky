@@ -1,0 +1,52 @@
+@import "../../Variables.scss";
+
+.mainButton {
+  background-color: $orange;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  color: $white;
+  box-shadow: 0 0px 6px 0 rgba(105, 104, 104, 0.2),
+    0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  > * {
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    color: $white;
+    margin: 0;
+  }
+}
+
+.secondaryButton {
+  background-color: $white;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  border: solid 0.125rem $orange;
+  color: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0px 6px 0 rgba(105, 104, 104, 0.2),
+    0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  > * {
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    color: $orange;
+    text-align: center;
+    align-items: center;
+  }
+}

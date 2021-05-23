@@ -1,0 +1,61 @@
+@import "../../Variables.scss";
+
+.popularproducts {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.image {
+  width: 20rem;
+  margin: 2rem 1rem 0rem;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: $orange;
+}
+
+.section {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0 auto 2rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  color: $orange;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 767px) {
+  .popularproducts {
+    flex-direction: column;
+    margin: 0 auto;
+
+    > :last-child {
+      margin-bottom: 1rem;
+    }
+
+    .image {
+      width: 100%;
+      margin: 1rem auto 0;
+    }
+  }
+
+  .section {
+    margin: 2rem auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .image {
+    width: 14rem;
+  }
+}

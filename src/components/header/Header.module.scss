@@ -1,51 +1,56 @@
-.topBorder{
-    width: 100%;
-    height: 2rem;
-    background-color: #FAEFEE;
-    margin: 0;
+@import "../../Variables.scss";
+
+.topBorder {
+  width: 100%;
+  height: 2rem;
+  background-color: $pink;
+  margin: 0;
 }
-.header{
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width:90%;
-    margin: 0 auto;
-    .fakeNavbar{
-        width: 27rem;
+.header {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  .fakeNavbar {
+    width: 27rem;
+  }
+  .logo {
+    width: 150px;
+  }
+  .navbar {
+    width: 27rem;
+    .link {
+      padding: 0 1rem;
+      text-decoration: none;
+      display: inline-block;
+      color: $orange;
+      transform-origin: 50% 50%;
+      transition: transform 0.1s linear;
     }
-    .logo{
-        width: 150px;
+    .link:hover {
+      transform: scale(1.2) rotate(0.1deg);
     }
-    .navbar{
-        width: 27rem;
-        .link{
-            padding: 0 1rem;
-            text-decoration: none;
-            display: inline-block;
-            color: #FF9E5C;
-        }
-        ul{
-        >:last-child{
-            padding: 0 0 0 1rem;
-        }
-        >:first-child{
-            padding: 0 1rem 0 0;
-        }
+    ul {
+      > :last-child {
+        padding: 0 0 0 1rem;
+      }
+      > :first-child {
+        padding: 0 1rem 0 0;
+      }
     }
-    }
+  }
 }
-.icon{
-    font-size: 1.5rem;
-    margin-left: 3rem;
+.icon {
+  font-size: 1.5rem;
+  margin-left: 3rem;
 }
 
-
-
-    
-    
-
-
-
-
+.container {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  z-index: 50;
+}

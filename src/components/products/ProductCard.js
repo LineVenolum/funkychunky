@@ -1,74 +1,119 @@
-import { useState, useEffect } from "react";
-import Client from 'shopify-buy';
-import styles from './ProductCard.module.scss';
-import {Link} from "react-router-dom";
+import { useState } from "react";
+import styles from "./ProductCard.module.scss";
+import { Link } from "react-router-dom";
+import { MainButton } from "../buttons/MainButton";
+import { SecondaryButton } from "../buttons/SecondaryButton";
+import { useMediaQuery } from "react-responsive";
 
+export const ProductCard = ({
+  id,
+  image,
+  title,
+  price,
+  description,
+  onClick,
+  imagetwo,
+}) => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-device-width: 1024px)",
+  });
 
-const client = Client.buildClient({
-  domain: 'funkychunkystrikk.myshopify.com',
-  storefrontAccessToken: '7a5c4599b87dc7df900973d4b72fe943'
-});
-
-
-export const ProductCard = () => {
-
-  const [products, setProducts] = useState([]);
   const [isHovering, setIsHovering] = useState(false);
 
-	useEffect( () => {
-  
-	  client.product.fetchAll().then((products) => {
-
-		console.log(products);
-		setProducts(products);
-	  });
-  
-	}, [])
-
-
-  function handleMouseEnter(e){
+  function handleMouseEnter(e) {
     setIsHovering(true);
   }
 
-  function handleMouseLeave(){
+  function handleMouseLeave() {
     setIsHovering(false);
   }
 
+  return (
+    <>
+      {isDesktopOrLaptop & isHovering ? (
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={styles.cardWrapper}
+        >
+          <div className={styles.expandedCard}>
+            <div className={styles.productCard} key={id}>
+              <section className={styles.imageSection}>
+                <img src={imagetwo} alt="strikkeoppskrift"></img>
+              </section>
+              <section className={styles.information}>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.price}>{price} NOK</p>
+              </section>
+              <section className={styles.information}>
+                <p>{description}</p>
+              </section>
+              <div className={styles.buttons}>
+                <MainButton className={styles.button} onClick={onClick}>
+                  KJØP
+                </MainButton>
+                <SecondaryButton className={styles.button}>
+                  <Link
+                    className={styles.link}
+                    to={`/oppskrifter/detaljer/${id}`}
+                  >
+                    MER INFO
+                  </Link>
+                </SecondaryButton>
+              </div>
+            </div>{" "}
+          </div>{" "}
+        </div>
+      ) : isDesktopOrLaptop ? (
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={styles.cardWrapper}
+        >
+          <div className={styles.productCard} key={id}>
+            <section>
+              <img src={image} alt="strikkeoppskrift"></img>
+            </section>
+            <section className={styles.information}>
+              <h2 className={styles.title}>{title}</h2>
+              <p className={styles.price}>{price} NOK</p>
+            </section>
+          </div>{" "}
+        </div>
+      ) : null}
 
- return( 
- <div>
-    {products.map((product) => {
-      return (
-        <div  className={styles.productCard} key={product.id}>
-          {isHovering ? <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.cardWrapper}> <div className={styles.expandedCard}>
-        <div className={styles.productCard} key={product.id}>
-          <section className={styles.imageSection}>
-                     <img src={product.images[0].src} alt="something"></img>
-         </section>
-         <section className={styles.information}>
-          <h2 className={styles.title}>{product.title}</h2>
-          <p className={styles.price} >{product.variants[0].price}</p>
-          </section>
-          <section className={styles.information}>
-            <p>{product.description}</p>
-          </section>
-          <section className={styles.information}>
-            <button> <Link className={styles.link} to={`/detail/{${product.id}`}>OPPSKRIFTER</Link></button>
-            <button>MER INFO</button>
-          </section>
-        </div> </div> </div> : <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.cardWrapper}>  <div  className={styles.productCard} key={product.id}>
-          <section>
-                     <img src={product.images[0].src} alt="something"></img>
-         </section>
-         <section className={styles.information}>
-          <h2 className={styles.title}>{product.title}</h2>
-          <p className={styles.price} >{product.variants[0].price}</p>
-          </section>
-        </div> </div> }
-        </div> 
-      )
-    })}
-  </div>
-
- )
-}
+      {!isDesktopOrLaptop && (
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={styles.cardWrapper}
+        >
+          <div className={styles.expandedCard}>
+            <div className={styles.productCard} key={id}>
+              <section className={styles.imageSection}>
+                <img src={imagetwo} alt="strikkeoppskrift"></img>
+              </section>
+              <section className={styles.information}>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.price}>{price} NOK</p>
+              </section>
+              <section className={styles.information}>
+                <p>{description}</p>
+              </section>
+              <div className={styles.buttons}>
+                <MainButton className={styles.button} onClick={onClick}>
+                  KJØP
+                </MainButton>
+                <SecondaryButton className={styles.button}>
+                  <Link className={styles.link} to={`/detail/${id}`}>
+                    MER INFO
+                  </Link>
+                </SecondaryButton>
+              </div>
+            </div>{" "}
+          </div>{" "}
+        </div>
+      )}
+    </>
+  );
+};

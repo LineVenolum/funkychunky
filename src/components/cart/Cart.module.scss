@@ -1,0 +1,68 @@
+@import "../../Variables.scss";
+
+.openCart {
+  background-color: $white;
+  width: 20rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: 350ms;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 100;
+}
+
+.closedCart {
+  background-color: $white;
+  width: 20rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 850ms;
+}
+
+.heading {
+  color: $orange;
+}
+
+.image {
+  width: 4rem;
+}
+
+.exit {
+  width: 95%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.lineItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  > * {
+    padding: 1rem;
+  }
+}
+
+.text {
+  width: 7.5rem;
+  .title {
+    font-weight: 800;
+  }
+}
+
+.buy {
+  margin: 0 auto;
+}

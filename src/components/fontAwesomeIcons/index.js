@@ -1,5 +1,5 @@
 import {library} from '@fortawesome/fontawesome-svg-core';
-import { faShoppingBag} from '@fortawesome/free-solid-svg-icons' ;
+import { faShoppingBag, faComment, faTimes, faTrash, faBars} from '@fortawesome/free-solid-svg-icons' ;
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faShoppingBag, fab);
+library.add(faShoppingBag, faComment, faTimes, faTrash, fab, faBars);

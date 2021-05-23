@@ -1,0 +1,68 @@
+@import "../../Variables.scss";
+
+.navbar{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    background-color: $white;
+    color: $orange;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    z-index: 20;
+    > ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .link{
+        padding: 1rem 1rem 1rem 2rem;
+        text-decoration: none;
+        display: inline-block;
+        color: $orange;
+    }
+}
+
+.flowers{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.firstFlower{
+    position: absolute;
+    right: 10%;
+    top: -40%;
+    width: 4rem;
+    z-index: 20;
+}
+.secondFlower{
+    position: absolute;
+    right: 20%;
+    top:-15%;
+    width: 5rem;
+    z-index: 20;
+}
+.thirdFlower{
+    position: absolute;
+    right: 10%;
+    top:15%;
+    width: 4rem;
+    z-index: 20;
+}
+.fourthFlower{
+    position: absolute;
+    right: 45%;
+    top:30%;
+    width: 5rem;
+    z-index: 20;
+}
+.fifthFlower{
+    position: absolute;
+    right: 20%;
+    top:50%;
+    width: 5rem;
+    z-index: 20;
+}

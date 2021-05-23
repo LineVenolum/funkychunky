@@ -1,0 +1,54 @@
+@import "../../Variables.scss";
+
+.container{
+    font-size: 2rem;
+    color: $orange;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    z-index: 50;
+
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+
+
+}
+
+.logo{
+    width: 150px;
+    height: 100px;
+}
+
+.link{
+    text-decoration: none;
+    display: inline-block;
+    color: $orange;
+    padding: 0;
+}
+
+.topBorder{
+    background-color: $pink;
+    width: 100%;
+    height: 1.5rem;
+
+}
+.exit{
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+@media only screen and (min-width:767px) and (max-width: 1223px){
+    .header{
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+    }
+    
+    }

@@ -1,0 +1,109 @@
+@import "../../Variables.scss";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  color: $orange;
+
+  text-align: center;
+  width: 80%;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 800px;
+  margin: 1rem auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.priceandbutton {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem auto 0;
+  justify-content: center;
+  > :first-child {
+    margin-right: 1rem;
+  }
+  > :last-child {
+    margin-left: 1rem;
+    > * {
+      margin: 0;
+    }
+  }
+}
+
+.secondImage {
+  margin: 1rem auto 4rem;
+  > img {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.box {
+  width: 50%;
+  padding: 4rem 0 0 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 80%;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin: 0;
+}
+
+.description {
+  margin: 3rem auto;
+}
+
+.text {
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .price {
+    margin: 0;
+  }
+
+  .image {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .details {
+    flex-direction: column;
+    height: auto;
+    width: 85%;
+    padding-bottom: 1rem;
+    min-height: auto;
+  }
+
+  .titlePrice {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .description {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 1rem 0;
+  }
+}

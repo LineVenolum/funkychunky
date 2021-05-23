@@ -1,17 +1,21 @@
+@import "../../Variables.scss";
+
+
 .footer{
-    background-color: #FAEFEE;
+    background-color: $pink;
     height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    color: #ff9148;
+    color: $orange;
+    position: relative;
 }
 
 .footerMenu{
     display: flex;
     justify-content: center;
     margin: 0 auto 2.6rem;
-    color: #FF9E5C;
+    color: $orange;
     >ul{
         padding: 0;
     }
@@ -22,7 +26,7 @@
     padding: 0 2rem;
     text-decoration: none;
     display: inline-block;
-    color: #ff9148;
+    color:$orange;
 }
 
 
@@ -37,4 +41,48 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
+}
+
+.flowers{
+    position: absolute;
+    width: 250px;
+    right: 15%;
+}
+
+@media only screen and (max-width: 1200px){
+    .flowers{
+        position: absolute;
+        right: 0%;
+        width: 100px;
+        bottom: 0%;
+
+
+    }
+
+    .bottomText{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        >*{
+            margin: 0.25rem;
+        }
+
+        >:last-child{
+            margin-top: 1.25rem ;
+        }
+    }
+    .footerMenu{
+        margin-bottom: 1rem;
+    }
+
+    .footer{
+        height: auto;
+
+    }
+
+    .link{
+       padding: 0 1rem;
+    }
 }

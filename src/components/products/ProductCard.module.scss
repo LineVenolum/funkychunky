@@ -1,0 +1,97 @@
+@import "../../Variables.scss";
+
+.productCard {
+  width: 20rem;
+  margin: 1rem auto;
+  color: $orange;
+  font-size: 1rem;
+
+  img {
+    padding: 1rem;
+    width: 18rem;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.information {
+  padding: 0 1rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .title,
+  .price {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expandedCard {
+  width: 20rem;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardWrapper {
+  width: 20rem;
+  margin: 1rem auto;
+  height: auto;
+  min-height: 610px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 1rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardWrapper {
+    height: 37rem;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .cardWrapper {
+    width: 18rem;
+  }
+
+  .expandedCard {
+    width: 18rem;
+  }
+
+  .imageSection {
+    > img {
+      width: 15rem;
+    }
+  }
+
+  .productCard {
+    width: 18rem;
+    .price {
+      font-size: 16px;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .information {
+    width: 15rem;
+  }
+
+  .cardWrapper {
+    height: 32rem;
+  }
+}

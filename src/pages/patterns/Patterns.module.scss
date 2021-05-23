@@ -1,0 +1,11 @@
+.container {
+  margin-top: 10rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    > :first-child {
+      margin-top: 10rem;
+    }
+  }
+}

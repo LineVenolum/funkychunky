@@ -1,0 +1,33 @@
+@import "../../Variables.scss";
+
+.image {
+  width: 16rem;
+  height: 320px;
+  margin: 0 0.5rem;
+}
+
+.Swiper {
+  margin: 1rem 0;
+}
+
+.head {
+  text-align: center;
+  color: $orange;
+  margin-bottom: 1rem;
+}
+
+:global {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $darkpink;
+  }
+}
+
+.instagram {
+  margin: 4rem auto;
+}
+
+.mobileImage {
+  width: 12rem;
+  height: 240px;
+}

@@ -1,3 +1,140 @@
-.home{
-    margin: 0;
+@import "../../Variables.scss";
+$img: "../../images/IMG_2527.jpg";
+$banner-img: "../../images/IMG_2533.jpg";
+$mobile-banner: "../../images/image1.jpeg";
+
+.home {
+  margin: 0;
+  margin-top: 10rem;
+}
+.images {
+  width: 100%;
+  background: url($banner-img);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  min-height: 43rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $white;
+}
+
+.bannertext {
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.innerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: $white;
+  height: fit-content;
+}
+
+.section {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 40vh;
+  background-color: $barbiepink;
+}
+
+.image {
+  width: 50vw;
+  background: url($img);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 40vh;
+  }
+}
+
+.videobutton {
+  position: relative;
+  bottom: 50;
+  background-color: transparent;
+  border: solid $white 3px;
+  border-radius: 6px;
+  color: $white;
+  font-size: 1rem;
+  height: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.middle {
+  font-size: 1.25rem;
+  color: $darkpink;
+}
+
+.buybutton {
+  position: relative;
+  bottom: 50;
+  background-color: transparent;
+  border: solid $orange 3px;
+  border-radius: 6px;
+  background-color: $orange;
+  color: $white;
+  font-size: 1rem;
+  height: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0px 6px 0 rgba(105, 104, 104, 0.2),
+    0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  transform-origin: 50% 50%;
+  transition: transform 0.1s linear;
+}
+.buybutton:hover {
+  color: $darkorange;
+}
+.buybutton:active {
+  transform: scale(0.8) rotate(0.1deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .innerBox {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .section {
+      width: 100vw;
+      height: 50vh;
+    }
+  }
+  .image {
+    > img {
+      width: 100vw;
+      height: auto;
+    }
+    background-color: transparent;
+  }
+
+  .home {
+    margin-top: 132px;
+  }
+  .images {
+    width: 100%;
+    background: url($mobile-banner);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height: 82vh;
+  }
 }
